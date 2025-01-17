@@ -1,0 +1,29 @@
+.dock {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: end;
+  justify-content: center;
+}
+
+.dock-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 3px 0 3px;
+  border: 1px solid #555454;
+  min-width: 618px;
+  height: 71px;
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(27, 27, 29, .3);
+  box-shadow: 0 0 4px #000;
+}
+
+.dock-item {
+  background-color: #ffff;
+  border-radius: 10px;
+  height: 58px;
+  width: 58px;
+}

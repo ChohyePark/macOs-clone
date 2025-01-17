@@ -1,10 +1,12 @@
+import Dock from "../Dock/Dock";
 import LoadingWindow from "../LoadingWindow/LoadingWindow";
 
 
 export default function Page({ children }) {
   return (
     <div className="page">
-      <LoadingWindow></LoadingWindow>
+      <Dock></Dock>
+      {/* <LoadingWindow></LoadingWindow> */}
     </div>
   );
 }
