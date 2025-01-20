@@ -12,18 +12,29 @@
   justify-content: center;
   gap: 18px;
   padding: 0 3px 0 3px;
-  border: 1px solid #555454;
+  border: 1px solid rgb(85, 84, 84);
   min-width: 618px;
   height: 71px;
   border-radius: 18px;
   backdrop-filter: blur(20px);
-  background-color: rgba(27, 27, 29, .3);
+  background-color: rgba(27, 27, 29, 0.4);
   box-shadow: 0 0 4px #000;
 }
 
+
 .dock-item {
-  background-color: #ffff;
-  border-radius: 10px;
-  height: 58px;
-  width: 58px;
+  .dock-icon {
+    height: 3.59rem;
+    cursor: url("../../resources//images/pointing.png"), auto;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); 
+  }
+}
+
+.dock-item:hover {
+  margin-bottom: 20px;
+  .dock-icon {
+    height: 90px;
+    width: 88px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }

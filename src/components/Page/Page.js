@@ -1,6 +1,6 @@
-import Dock from "../Dock/Dock";
-import LoadingWindow from "../LoadingWindow/LoadingWindow";
-
+import Dock from '../Dock/Dock';
+import './Page.scss';
+import LoadingWindow from '../LoadingWindow/LoadingWindow';
 
 export default function Page({ children }) {
   return (
