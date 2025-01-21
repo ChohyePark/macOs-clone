@@ -23,18 +23,37 @@
 
 
 .dock-item {
+  transition: 0.175s all ease-in-out;
   .dock-icon {
     height: 3.59rem;
     cursor: url("../../resources//images/pointing.png"), auto;
-    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); 
+    transition: 0.175s all ease-in-out;; 
   }
 }
 
 .dock-item:hover {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+
   .dock-icon {
     height: 90px;
     width: 88px;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.distance-1 {
+  margin-bottom: 18px !important;
+
+  .dock-icon {
+    height: 70px;
+    width: 69px;
+  }
+}
+
+.distance-2 {
+  margin-bottom: 12px !important;
+
+  .dock-icon {
+    height: 62px;
+    width: 61px;
   }
 }
