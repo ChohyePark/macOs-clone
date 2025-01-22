@@ -1,0 +1,54 @@
+.nav-bar {
+  width: 100vw;
+  height: 29px;
+  position: fixed;
+  color : #ffff;
+  top : 0;
+  z-index: 10;
+  background-color:rgba(0, 0, 0, 0.25);
+  display: flex;
+
+  .right {
+    font-family: "SF Regular";
+    font-size : 13px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right : 10px;
+    gap : 10px;
+    
+    h3 {
+      font-size: 13px;
+    }
+  }
+}
+
+.section {
+  font-size: 13px;
+  font-family: "SF Regular";
+  padding : 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width : 40px;
+
+  img {
+    width : 14px;
+    height : 16px;
+  }
+}
+
+.finder {
+  font-family: "SF Bold";
+}
+
+.setting {
+  width : 12px;
+  height: 26px;
+  fill: white;
+}

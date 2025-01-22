@@ -1,9 +1,9 @@
 .dock {
+  position: absolute;
+  width : 100%;
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  align-items: end;
   justify-content: center;
+  bottom: 10px;
 }
 
 .dock-box {
