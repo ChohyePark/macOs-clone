@@ -1,18 +1,28 @@
 import Dock from '../Dock/Dock';
-import { useEffect, useState } from 'react';
+import { store } from '../../App';
+import { useContext, useEffect, useState } from 'react';
 import './Page.scss';
 import LoadingWindow from '../LoadingWindow/LoadingWindow';
 
 export default function Page({ children }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [state, dispatch] = useContext(store);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3350);
-
-    return () => clearTimeout(timer);
+    console.log(state);
+    const boot = sessionStorage.getItem('boot');
+    if (boot !== null && boot !== undefined) {
+      dispatch({ type: 'state/BOOT', payload: boot.status });
+    }
   }, []);
 
-  return <div className="page">{isLoading ? <LoadingWindow /> : children}</div>;
+  useEffect(() => {
+    if (state.booting) {
+      return;
+    }
+    sessionStorage.setItem('boot', JSON.stringify({ status: state.booting }));
+  }, [state]);
+
+  return (
+    <div className="page">{state.booting ? <LoadingWindow /> : children}</div>
+  );
 }

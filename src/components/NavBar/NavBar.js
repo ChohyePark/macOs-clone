@@ -10,7 +10,6 @@ export default function NavBar() {
 
   useEffect(() => {
     dispatch({ type: 'date/SET' });
-    console.log(state.date);
   }, []);
   return (
     <div className="nav-bar">

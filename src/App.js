@@ -22,7 +22,6 @@ function App() {
     <StoreProvider>
       <Page>
         <NavBar />
-
         <Dock />
       </Page>
     </StoreProvider>
