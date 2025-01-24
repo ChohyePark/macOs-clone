@@ -8,11 +8,20 @@ export default function Page({ children }) {
   const [state, dispatch] = useContext(store);
 
   useEffect(() => {
-    console.log(state);
+    const handleClickOutside = () => {
+      dispatch({ type: 'section/SELECT', payload: undefined });
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
     const boot = sessionStorage.getItem('boot');
     if (boot !== null && boot !== undefined) {
       dispatch({ type: 'state/BOOT', payload: boot.status });
     }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   useEffect(() => {

@@ -14,6 +14,8 @@ export default function reducer(state, action) {
       return { ...state, booting: false };
     case 'state/BOOT':
       return { ...state, booting: action.payload };
+    case 'section/SELECT':
+      return { ...state, section: action.payload };
     default:
       return initialState;
   }
