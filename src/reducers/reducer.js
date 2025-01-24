@@ -1,5 +1,4 @@
 import getDate from '../utils/helpers/getDate';
-import initialState from './initialState';
 
 export default function reducer(state, action) {
   switch (action.type) {
@@ -17,6 +16,6 @@ export default function reducer(state, action) {
     case 'section/SELECT':
       return { ...state, section: action.payload };
     default:
-      return initialState;
+      return state;
   }
 }

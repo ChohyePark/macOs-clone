@@ -15,6 +15,7 @@ export default function Page({ children }) {
     document.addEventListener('mousedown', handleClickOutside);
 
     const boot = sessionStorage.getItem('boot');
+
     if (boot !== null && boot !== undefined) {
       dispatch({ type: 'state/BOOT', payload: boot.status });
     }

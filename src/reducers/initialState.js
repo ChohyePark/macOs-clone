@@ -27,3 +27,5 @@ const initialState = {
   },
   onTop: [], // 최상위에 있는 요소들 (배열)
 };
+
+export default initialState;
