@@ -6,6 +6,7 @@ import reducer from './reducers/reducer';
 import initialState from './reducers/initialState';
 import { createContext, useReducer } from 'react';
 import Dock from './components/Dock/Dock';
+import PopUp from './components/PopUp/PopUp';
 
 export const store = createContext(null);
 
@@ -22,6 +23,7 @@ function App() {
     <StoreProvider>
       <Page>
         <NavBar />
+        <PopUp />
         <Dock />
       </Page>
     </StoreProvider>
