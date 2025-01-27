@@ -1,0 +1,54 @@
+.wallpaper-selector {
+  color : #fff;
+  padding: 10px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .item-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 10px;
+  
+      .image-wrapper {
+        box-sizing: border-box;
+        padding: 3px;
+        width: 181px;
+        height: 181px;
+        border-radius: 12px;
+        margin-right: 7px;
+        cursor: url("../../resources/images/pointing.png"), auto;
+
+        * {
+          pointer-events: none;
+        }
+  
+        img {
+          height: 175px;
+          width: 175px;
+          border-radius: 12px;
+        }
+      }
+
+      .image-wrapper:hover {
+        border: 2px solid rgba(0, 122, 255, 0.8);
+      }
+
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+  }
+}

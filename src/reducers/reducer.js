@@ -15,6 +15,20 @@ export default function reducer(state, action) {
       return { ...state, booting: action.payload };
     case 'section/SELECT':
       return { ...state, section: action.payload };
+    case 'wallpaper/CHANGE':
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          wallpaper: {
+            open: true,
+            preview: action.payload.preview,
+            src: action.payload.src,
+            name: action.payload.name,
+            surname: action.payload.surname,
+          },
+        },
+      };
     default:
       return state;
   }

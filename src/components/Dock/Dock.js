@@ -9,6 +9,7 @@ import github from '../../resources/images/webp/github.png';
 import netflix from '../../resources/images/webp/netflix.png';
 import photos from '../../resources/images/webp/photos.png';
 import vscode from '../../resources/images/webp/vscode.png';
+import runday from '../../resources/images/webp/rundaylogo.png';
 import { s } from 'framer-motion/client';
 
 export default function Dock() {
@@ -71,7 +72,7 @@ export default function Dock() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img alt="calendar" src={calendar} className="dock-icon" />
+          <img alt="calendar" src={runday} className="dock-icon" />
         </div>
         <div
           className={`dock-item ${

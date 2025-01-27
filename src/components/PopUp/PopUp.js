@@ -9,7 +9,7 @@ export default function PopUp({ children }) {
   return (
     <Draggable>
       <div className="pop-up" id="pop-up">
-        <section className="pop-up-handle">
+        <section className="pop-up-handle" id="pop-up-handle">
           <div className="dots">
             <div className="dot red">
               <Close className="close" />
@@ -22,6 +22,7 @@ export default function PopUp({ children }) {
             </div>
           </div>
         </section>
+        <section className="pop-up-content">{children}</section>
       </div>
     </Draggable>
   );
