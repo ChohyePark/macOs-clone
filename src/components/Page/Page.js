@@ -33,6 +33,8 @@ export default function Page({ children }) {
   }, [state]);
 
   return (
-    <div className="page">{state.booting ? <LoadingWindow /> : children}</div>
+    <div className="page" id="page">
+      {state.booting ? <LoadingWindow /> : children}
+    </div>
   );
 }
