@@ -16,6 +16,11 @@ export default function NavBar() {
     dispatch({ type: 'date/SET' });
   }, []);
 
+  setInterval(() => {
+    dispatch({
+      type: 'date/SET',
+    });
+  }, 60000);
   return (
     <div className="nav-bar">
       <div className="logo section" id="logo" onClick={dispatchAction}>
