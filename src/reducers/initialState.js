@@ -17,13 +17,7 @@ const initialState = {
     airdrop: false, // AirDrop 활성화 여부
     animations: true, // 애니메이션 활성화 여부
     notch: true, // 노치 표시 여부
-    wallpaper: {
-      open: false, // 배경화면 설정창 열림 여부
-      preview: '', // 배경화면 미리보기
-      src: '', // 배경화면 이미지 URL
-      name: '', // 배경화면 이름
-      surname: '', // 배경화면 성
-    },
+    wallpaper: null,
   },
   onTop: [], // 최상위에 있는 요소들 (배열)
 };

@@ -1,4 +1,5 @@
 import getDate from '../utils/helpers/getDate';
+import wallpapers from '../utils/helpers/getWallPapers';
 
 export default function reducer(state, action) {
   switch (action.type) {
@@ -27,6 +28,25 @@ export default function reducer(state, action) {
             name: action.payload.name,
             surname: action.payload.surname,
           },
+        },
+      };
+    case 'wallpaper/TOGGLE':
+      return {
+        state,
+        settings: {
+          ...state.settings,
+          wallpaper: {
+            ...state.settings.wallpaper,
+            open: true,
+          },
+        },
+      };
+    case 'state/LOCAL':
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          wallpaper: action.payload,
         },
       };
     default:

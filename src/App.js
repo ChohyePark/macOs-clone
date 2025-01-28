@@ -4,10 +4,10 @@ import Page from './components/Page/Page';
 import './App.css';
 import reducer from './reducers/reducer';
 import initialState from './reducers/initialState';
-import { createContext, useReducer } from 'react';
+import { createContext, useContext, useEffect, useReducer } from 'react';
 import Dock from './components/Dock/Dock';
-import PopUp from './components/PopUp/PopUp';
-import WallPaperMenu from './components/WallpaperMenu/WallPaPerMenu';
+import WallPaperMenu from './components/WallpaperMenu/WallPaperMenu';
+import { use } from 'react';
 
 export const store = createContext(null);
 
@@ -22,12 +22,19 @@ const StoreProvider = ({ children }) => {
 function App() {
   return (
     <StoreProvider>
-      <Page>
-        <NavBar />
-        <WallPaperMenu />
-        <Dock />
-      </Page>
+      <AppContent />
     </StoreProvider>
+  );
+}
+
+function AppContent() {
+  const [state, dispatch] = useContext(store);
+  return (
+    <Page>
+      <NavBar />
+      <WallPaperMenu />
+      <Dock />
+    </Page>
   );
 }
 

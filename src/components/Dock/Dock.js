@@ -10,7 +10,7 @@ import netflix from '../../resources/images/webp/netflix.png';
 import photos from '../../resources/images/webp/photos.png';
 import vscode from '../../resources/images/webp/vscode.png';
 import runday from '../../resources/images/webp/rundaylogo.png';
-import { s } from 'framer-motion/client';
+import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
 
 export default function Dock() {
   const [state, dispatch] = useContext(store);
@@ -21,6 +21,14 @@ export default function Dock() {
 
   const handleMouseLeave = () => {
     dispatch({ type: 'dock/RESET' });
+  };
+
+  const openWallPaperPopUp = () => {
+    console.log(state.settings.wallpaper);
+    if (state.settings.wallpaper.open) {
+      toggleWallpaperVis();
+    }
+    dispatch({ type: 'wallpaper/TOGGLE' });
   };
 
   return (
@@ -141,6 +149,7 @@ export default function Dock() {
           id="6"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={openWallPaperPopUp}
         >
           <img alt="photos" src={photos} className="dock-icon" />
         </div>
