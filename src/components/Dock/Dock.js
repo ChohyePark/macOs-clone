@@ -11,6 +11,7 @@ import photos from '../../resources/images/webp/photos.png';
 import vscode from '../../resources/images/webp/vscode.png';
 import runday from '../../resources/images/webp/rundaylogo.png';
 import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
+import toggleRundayVis from '../../utils/helpers/toggleRundayVis';
 
 export default function Dock() {
   const [state, dispatch] = useContext(store);
@@ -24,11 +25,16 @@ export default function Dock() {
   };
 
   const openWallPaperPopUp = () => {
-    console.log(state.settings.wallpaper);
     if (state.settings.wallpaper.open) {
       toggleWallpaperVis();
     }
     dispatch({ type: 'wallpaper/TOGGLE' });
+  };
+
+  const openRundayPopUp = () => {
+    toggleRundayVis();
+
+    dispatch({ type: 'runday/TOGGLE' });
   };
 
   return (
@@ -79,6 +85,7 @@ export default function Dock() {
           id="2"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={openRundayPopUp}
         >
           <img alt="calendar" src={runday} className="dock-icon" />
         </div>

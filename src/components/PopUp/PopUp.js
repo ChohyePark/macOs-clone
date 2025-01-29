@@ -4,7 +4,12 @@ import { ReactComponent as Minimize } from '../../resources/images/svg/minimize.
 import { ReactComponent as Stretch } from '../../resources/images/svg/stretch.svg';
 import Draggable from 'react-draggable';
 
-export default function PopUp({ children, togglePopUpMin, togglePopUpClose }) {
+export default function PopUp({
+  children,
+  togglePopUpMin,
+  togglePopUpClose,
+  height,
+}) {
   return (
     <Draggable>
       <div className="pop-up" id="pop-up">
@@ -21,7 +26,9 @@ export default function PopUp({ children, togglePopUpMin, togglePopUpClose }) {
             </div>
           </div>
         </section>
-        <section className="pop-up-content">{children}</section>
+        <section className="pop-up-content" style={{ height: height }}>
+          {children}
+        </section>
       </div>
     </Draggable>
   );

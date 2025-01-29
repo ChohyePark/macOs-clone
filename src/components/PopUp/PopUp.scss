@@ -1,6 +1,6 @@
 
 .pop-up{
-  min-width: 550px;
+  min-width: 410px;
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
@@ -41,6 +41,7 @@
   }
 
   .pop-up-content {
+    width: 100%;
     background-color: #1e1f23;
     min-height: 500px;
     max-height: 620px;

@@ -22,7 +22,6 @@ export default function Page({ children }) {
     }
 
     if (wallpaper !== null && wallpaper !== undefined) {
-      console.log(wallpaper);
       let updatedWallpaper = {
         open: true,
         name: wallpaper.name,

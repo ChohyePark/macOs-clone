@@ -7,7 +7,7 @@ import initialState from './reducers/initialState';
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import Dock from './components/Dock/Dock';
 import WallPaperMenu from './components/WallpaperMenu/WallPaperMenu';
-import { use } from 'react';
+import RundayMenu from './components/RundayMenu/RundayMenu';
 
 export const store = createContext(null);
 
@@ -33,6 +33,7 @@ function AppContent() {
     <Page>
       <NavBar />
       <WallPaperMenu />
+      <RundayMenu />
       <Dock />
     </Page>
   );

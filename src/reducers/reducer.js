@@ -1,5 +1,4 @@
 import getDate from '../utils/helpers/getDate';
-import wallpapers from '../utils/helpers/getWallPapers';
 
 export default function reducer(state, action) {
   switch (action.type) {
@@ -38,6 +37,16 @@ export default function reducer(state, action) {
           wallpaper: {
             ...state.settings.wallpaper,
             open: true,
+          },
+        },
+      };
+    case 'runday/TOGGLE':
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          runday: {
+            open: !state.settings.runday.open,
           },
         },
       };

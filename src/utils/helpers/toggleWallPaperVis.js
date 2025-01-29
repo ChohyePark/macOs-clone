@@ -1,6 +1,6 @@
 const toggleWallpaperVis = () => {
   const target = document.getElementById('wallpaper-container');
-  if (target?.classList.contains('wallpaper-container')) {
+  if (target.classList.contains('wallpaper-container')) {
     target.classList.remove('wallpaper-container');
     target.classList.add('wallpaper-container-closed');
   } else if (target.classList.contains('wallpaper-container-closed')) {

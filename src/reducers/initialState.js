@@ -14,10 +14,12 @@ const initialState = {
   settings: {
     open: false, // 설정창 열림 여부
     color: '', // 색상 설정
-    airdrop: false, // AirDrop 활성화 여부
     animations: true, // 애니메이션 활성화 여부
     notch: true, // 노치 표시 여부
     wallpaper: null,
+    runday: {
+      open: false,
+    },
   },
   onTop: [], // 최상위에 있는 요소들 (배열)
 };
