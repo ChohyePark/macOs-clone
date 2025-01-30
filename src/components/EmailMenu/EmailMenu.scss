@@ -1,0 +1,15 @@
+.email-container {
+  position: absolute;
+  top: 70px;
+  left: 250px;
+}
+
+.email-container-closed {
+  position: absolute;
+  top: 70px;
+  left: 250px;
+  opacity: 0;
+  transition: 0.4s all;
+  transform: scale(0.01) !important;
+  visibility: hidden
+}

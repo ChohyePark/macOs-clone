@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { store } from '../../App';
 import finder from '../../resources/images/webp/finder.png';
 import appleMusic from '../../resources/images/webp/applemusic.png';
-import calendar from '../../resources/images/webp/calendar.png';
 import discord from '../../resources/images/webp/discord.png';
 import github from '../../resources/images/webp/github.png';
 import netflix from '../../resources/images/webp/netflix.png';
@@ -12,6 +11,7 @@ import vscode from '../../resources/images/webp/vscode.png';
 import runday from '../../resources/images/webp/rundaylogo.png';
 import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
 import toggleRundayVis from '../../utils/helpers/toggleRundayVis';
+import toggleEmailVis from '../../utils/helpers/toggleEmailVis';
 
 export default function Dock() {
   const [state, dispatch] = useContext(store);
@@ -33,10 +33,13 @@ export default function Dock() {
 
   const openRundayPopUp = () => {
     toggleRundayVis();
-
     dispatch({ type: 'runday/TOGGLE' });
   };
 
+  const openEmailPopUp = () => {
+    toggleEmailVis();
+    // dispatch({ type: 'email/TOGGLE' });
+  };
   return (
     <div className="dock">
       <div className="dock-box">
@@ -51,6 +54,7 @@ export default function Dock() {
           id="0"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={openEmailPopUp}
         >
           <img alt="finder" src={finder} className="dock-icon" />
         </div>

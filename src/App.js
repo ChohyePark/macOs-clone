@@ -8,6 +8,7 @@ import { createContext, useContext, useEffect, useReducer } from 'react';
 import Dock from './components/Dock/Dock';
 import WallPaperMenu from './components/WallpaperMenu/WallPaperMenu';
 import RundayMenu from './components/RundayMenu/RundayMenu';
+import EmailMenu from './components/EmailMenu/EmailMenu';
 
 export const store = createContext(null);
 
@@ -34,6 +35,7 @@ function AppContent() {
       <NavBar />
       <WallPaperMenu />
       <RundayMenu />
+      <EmailMenu />
       <Dock />
     </Page>
   );
