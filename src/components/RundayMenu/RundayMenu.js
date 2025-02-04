@@ -12,7 +12,7 @@ export default function RundayMenu() {
       <PopUp
         togglePopUpMin={toggleRundayMin}
         togglePopUpClose={toggleRundayVis}
-        height="380px"
+        height="600px"
       >
         <div className="runday-menu">
           <section className="record-section">
