@@ -20,6 +20,9 @@ const initialState = {
     runday: {
       open: false,
     },
+    email: {
+      oepn: false,
+    },
   },
   onTop: [], // 최상위에 있는 요소들 (배열)
 };

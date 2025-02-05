@@ -38,8 +38,9 @@ export default function Dock() {
 
   const openEmailPopUp = () => {
     toggleEmailVis();
-    // dispatch({ type: 'email/TOGGLE' });
+    dispatch({ type: 'email/TOGGLE' });
   };
+
   return (
     <div className="dock">
       <div className="dock-box">

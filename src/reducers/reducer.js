@@ -50,6 +50,16 @@ export default function reducer(state, action) {
           },
         },
       };
+    case 'email/TOGGLE':
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          email: {
+            open: !state.settings.email.open,
+          },
+        },
+      };
     case 'state/LOCAL':
       return {
         ...state,
