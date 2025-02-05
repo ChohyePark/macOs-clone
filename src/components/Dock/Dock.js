@@ -9,6 +9,7 @@ import netflix from '../../resources/images/webp/netflix.png';
 import photos from '../../resources/images/webp/photos.png';
 import vscode from '../../resources/images/webp/vscode.png';
 import runday from '../../resources/images/webp/rundaylogo.png';
+import email from '../../resources/images/webp/email.png';
 import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
 import toggleRundayVis from '../../utils/helpers/toggleRundayVis';
 import toggleEmailVis from '../../utils/helpers/toggleEmailVis';
@@ -73,7 +74,7 @@ export default function Dock() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img alt="apple music" src={appleMusic} className="dock-icon" />
+          <img alt="email" src={email} className="dock-icon" />
         </div>
         <div
           className={`dock-item ${
@@ -92,7 +93,7 @@ export default function Dock() {
           onMouseLeave={handleMouseLeave}
           onClick={openRundayPopUp}
         >
-          <img alt="calendar" src={runday} className="dock-icon" />
+          <img alt="runday" src={runday} className="dock-icon" />
         </div>
         <div
           className={`dock-item ${
