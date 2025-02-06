@@ -60,6 +60,7 @@ export default function Dock() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+          <div className="tool-tip">Finder</div>
           <img alt="finder" src={finder} className="dock-icon" />
         </div>
         <div
@@ -77,6 +78,7 @@ export default function Dock() {
           onMouseLeave={handleMouseLeave}
           onClick={openEmailPopUp}
         >
+          <div className="tool-tip">💌 편지</div>
           <img alt="email" src={email} className="dock-icon" />
         </div>
         <div
@@ -96,6 +98,7 @@ export default function Dock() {
           onMouseLeave={handleMouseLeave}
           onClick={openRundayPopUp}
         >
+          <div className="tool-tip">Runday</div>
           <img alt="runday" src={runday} className="dock-icon" />
         </div>
         <div
@@ -117,6 +120,7 @@ export default function Dock() {
             openNewTab('https://discord.com/');
           }}
         >
+          <div className="tool-tip">Discord</div>
           <img alt="discord" src={discord} className="dock-icon" />
         </div>
         <div
@@ -138,6 +142,7 @@ export default function Dock() {
             openNewTab('https://github.com/ChohyePark');
           }}
         >
+          <div className="tool-tip">GitHub</div>
           <img alt="github" src={github} className="dock-icon" />
         </div>
         <div
@@ -159,6 +164,7 @@ export default function Dock() {
             openNewTab('https://www.netflix.com/');
           }}
         >
+          <div className="tool-tip">Netflix</div>
           <img alt="netflix" src={netflix} className="dock-icon" />
         </div>
         <div
@@ -176,6 +182,7 @@ export default function Dock() {
           onMouseLeave={handleMouseLeave}
           onClick={openWallPaperPopUp}
         >
+          <div className="tool-tip">Photos</div>
           <img alt="photos" src={photos} className="dock-icon" />
         </div>
         <div
@@ -193,6 +200,7 @@ export default function Dock() {
             openNewTab('https://code.visualstudio.com/');
           }}
         >
+          <div className="tool-tip">VSCode</div>
           <img alt="vscode" src={vscode} className="dock-icon" />
         </div>
       </div>

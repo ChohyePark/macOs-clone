@@ -24,15 +24,41 @@
 
 .dock-item {
   transition: 0.175s all ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
   .dock-icon {
     height: 3.59rem;
     cursor: url("../../resources//images/pointing.png"), auto;
     transition: 0.175s all ease-in-out;; 
   }
+
+  .tool-tip {
+    position: absolute;
+    top: -30px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px 3px 8px;
+    border: 1px solid #707272;
+    backdrop-filter: blur(20px);
+    transition: 0.2s all;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .dock-item:hover {
   margin-bottom: 24px;
+
+  .tool-tip {
+    opacity: 1;
+    visibility: visible;
+  }
 
   .dock-icon {
     height: 90px;
