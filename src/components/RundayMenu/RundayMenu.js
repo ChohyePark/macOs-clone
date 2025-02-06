@@ -2,16 +2,19 @@ import './RundayMenu.scss';
 import { store } from '../../App';
 import { useContext } from 'react';
 import PopUp from '../PopUp/PopUp';
-import toggleRundayMin from '../../utils/helpers/toggleRundayMin';
-import toggleRundayVis from '../../utils/helpers/toggleRundayVis';
 import rundays from '../../utils/helpers/getRundays';
-
+import toggleMin from '../../utils/helpers/toggleMin';
+import toggleVis from '../../utils/helpers/toggleVis';
 export default function RundayMenu() {
   return (
     <div className="runday-container-closed" id="runday-container">
       <PopUp
-        togglePopUpMin={toggleRundayMin}
-        togglePopUpClose={toggleRundayVis}
+        togglePopUpMin={() => {
+          toggleMin('runday-container');
+        }}
+        togglePopUpClose={() => {
+          toggleVis('runday-container');
+        }}
         height="600px"
       >
         <div className="runday-menu">

@@ -10,9 +10,7 @@ import photos from '../../resources/images/webp/photos.png';
 import vscode from '../../resources/images/webp/vscode.png';
 import runday from '../../resources/images/webp/rundaylogo.png';
 import email from '../../resources/images/webp/email.png';
-import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
-import toggleRundayVis from '../../utils/helpers/toggleRundayVis';
-import toggleEmailVis from '../../utils/helpers/toggleEmailVis';
+import toggleVis from '../../utils/helpers/toggleVis';
 
 export default function Dock() {
   const [state, dispatch] = useContext(store);
@@ -27,19 +25,24 @@ export default function Dock() {
 
   const openWallPaperPopUp = () => {
     if (state.settings.wallpaper.open) {
-      toggleWallpaperVis();
+      toggleVis('wallpaper-container');
     }
     dispatch({ type: 'wallpaper/TOGGLE' });
   };
 
   const openRundayPopUp = () => {
-    toggleRundayVis();
+    toggleVis('runday-container');
     dispatch({ type: 'runday/TOGGLE' });
   };
 
   const openEmailPopUp = () => {
-    toggleEmailVis();
+    toggleVis('email-container');
     dispatch({ type: 'email/TOGGLE' });
+  };
+
+  const openNewTab = (url) => {
+    if (!url) return;
+    window.open(url, '_blank');
   };
 
   return (
@@ -56,7 +59,6 @@ export default function Dock() {
           id="0"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onClick={openEmailPopUp}
         >
           <img alt="finder" src={finder} className="dock-icon" />
         </div>
@@ -73,6 +75,7 @@ export default function Dock() {
           id="1"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={openEmailPopUp}
         >
           <img alt="email" src={email} className="dock-icon" />
         </div>
@@ -110,6 +113,9 @@ export default function Dock() {
           id="3"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={() => {
+            openNewTab('https://discord.com/');
+          }}
         >
           <img alt="discord" src={discord} className="dock-icon" />
         </div>
@@ -128,6 +134,9 @@ export default function Dock() {
           id="4"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={() => {
+            openNewTab('https://github.com/ChohyePark');
+          }}
         >
           <img alt="github" src={github} className="dock-icon" />
         </div>
@@ -146,6 +155,9 @@ export default function Dock() {
           id="5"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={() => {
+            openNewTab('https://www.netflix.com/');
+          }}
         >
           <img alt="netflix" src={netflix} className="dock-icon" />
         </div>
@@ -177,6 +189,9 @@ export default function Dock() {
           id="7"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={() => {
+            openNewTab('https://code.visualstudio.com/');
+          }}
         >
           <img alt="vscode" src={vscode} className="dock-icon" />
         </div>

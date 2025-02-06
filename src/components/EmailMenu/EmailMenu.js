@@ -1,11 +1,10 @@
 import './EmailMenu.scss';
-import toggleEmailMin from '../../utils/helpers/toggleEmailMin';
-import toggleEmailVis from '../../utils/helpers/toggleEmailVis';
+import toggleMin from '../../utils/helpers/toggleMin';
+import toggleVis from '../../utils/helpers/toggleVis';
 import { store } from '../../App';
 import PopUp from '../PopUp/PopUp';
 import { useContext, useEffect, useRef } from 'react';
 import EmailSound from '../../resources/audio/GreenDay_LastNightOnEarth.mp3';
-import { type } from '@testing-library/user-event/dist/type';
 
 export default function EmailMenu() {
   const [state, dispatch] = useContext(store);
@@ -43,12 +42,12 @@ export default function EmailMenu() {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-    toggleEmailVis();
+    toggleVis('email-container');
     dispatch({ type: 'email/TOGGLE' });
   };
 
   const minimizedEmailPopUp = () => {
-    toggleEmailMin();
+    toggleMin('email-container');
     dispatch({ type: 'email/TOGGLE' });
   };
 

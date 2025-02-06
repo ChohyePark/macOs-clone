@@ -2,9 +2,9 @@ import './WallPaperMenu.scss';
 import React, { useContext } from 'react';
 import { store } from '../../App';
 import wallpapers from '../../utils/helpers/getWallPapers';
-import toggleWallPaperMin from '../../utils/helpers/toggleWallPaperMin';
-import toggleWallpaperVis from '../../utils/helpers/toggleWallPaperVis';
 import PopUp from '../PopUp/PopUp';
+import toggleMin from '../../utils/helpers/toggleMin';
+import toggleVis from '../../utils/helpers/toggleVis';
 
 export default function WallPaperMenu() {
   const [state, dispatch] = useContext(store);
@@ -30,8 +30,12 @@ export default function WallPaperMenu() {
   return (
     <div className="wallpaper-container" id="wallpaper-container">
       <PopUp
-        togglePopUpMin={toggleWallPaperMin}
-        togglePopUpClose={toggleWallpaperVis}
+        togglePopUpMin={() => {
+          toggleMin('wallpaper-container');
+        }}
+        togglePopUpClose={() => {
+          toggleVis('wallpaper-container');
+        }}
       >
         <div className="wallpaper-menu">
           <div className="wallpaper-selector">
