@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/macOs-clone/static/css/main.49fc3353.css",
+    "main.css": "/macOs-clone/static/css/main.0d025bb8.css",
     "main.js": "/macOs-clone/static/js/main.04689973.js",
     "static/js/488.780e2bb4.chunk.js": "/macOs-clone/static/js/488.780e2bb4.chunk.js",
     "static/media/GreenDay_LastNightOnEarth.mp3": "/macOs-clone/static/media/GreenDay_LastNightOnEarth.c510ca20b43ad09e2547.mp3",
@@ -62,12 +62,12 @@
     "static/media/stretch.svg": "/macOs-clone/static/media/stretch.b50a76277a79dea1bdf2081b82e0fbc2.svg",
     "static/media/close.svg": "/macOs-clone/static/media/close.70c6fc85e1dd4034736c8c508d1ad21b.svg",
     "static/media/minimize.svg": "/macOs-clone/static/media/minimize.8dcbe4c1c3394aafd942f185c9d7a9f6.svg",
-    "main.49fc3353.css.map": "/macOs-clone/static/css/main.49fc3353.css.map",
+    "main.0d025bb8.css.map": "/macOs-clone/static/css/main.0d025bb8.css.map",
     "main.04689973.js.map": "/macOs-clone/static/js/main.04689973.js.map",
     "488.780e2bb4.chunk.js.map": "/macOs-clone/static/js/488.780e2bb4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49fc3353.css",
+    "static/css/main.0d025bb8.css",
     "static/js/main.04689973.js"
   ]
 }
