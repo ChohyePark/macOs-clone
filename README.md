@@ -15,25 +15,25 @@ React로 구현한 MacOS 환경입니다.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a42c8905-daeb-446d-8daf-e3b19a8e6ea0"
        alt="Image"
-       width="650px">
+       width="800px">
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/847bdb8d-3878-45d1-9b6b-d6be67d70e6d"
        alt="Image"
-       width="650px">
+       width="800px">
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5821ad97-0d12-4f15-ae4a-f88279b556d0"
        alt="Image"
-       width="650px">
+       width="800px">
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ead4abdc-c3f8-4444-a53d-040ace81afd8"
        alt="Image"
-       width="650px">
+       width="800px">
 </p>
 
 ## Stack
